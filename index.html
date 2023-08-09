@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Codingmart 1</title>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<style>
+		.world{
+			height: 500px;
+			width: 800px;
+			border: 5px solid gray;
+			border-radius: 2%;
+			margin: 50px;
+			position: relative;
+			overflow: hidden;
+			background-image: url('images/world.jpg');
+			/* background-color: beige; */
+			background-size: cover;
+		}
+		.bird{
+			display: inline;
+			border-radius: 4px;
+			position: absolute;
+			top: 120px;
+		}
+		.bird img{
+			height: 45px;
+			user-select: none;
+			-webkit-user-select: none;
+		}
+		.pillarBottom{
+			bottom: 0px;
+			position: absolute;
+			background-image: url('images/stone.png');
+			/* background-color:darkorange; */
+			background-size: 20px 20px;
+		}
+		.pillarTop{
+			top: 0px;
+			position: absolute;
+			background-image: url('images/ice.png');
+			/* background-color:darksalmon; */
+			background-size: 20px 20px;
+		}
+		.score-board{
+			display: inline-block;
+			position: absolute;
+			right: 55px;
+			top: 11px;
+			font-family: comic sans ms;
+			color: gray;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.game-over{
+			position: absolute;
+			text-align: center;
+			display: none;
+			font-family: comic sans ms;
+			left: 325px;
+			top: 200px;
+		}
+		.game-over h3{
+			color: #7da726;
+			font-size: 28px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="world">
+			<div class="bird">
+				<img src="images/bird.gif" alt="">
+			</div>
+			<span class="pillarBottom"></span>
+			<span class="pillarTop"></span>
+			<div class="score-board">
+				SCORE: <span class="score">0</span>
+			</div>
+			<div class="game-over">
+				<h2>GAME OVER</h2>
+				<h3 class="resetGame">RETRY</h3>
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>
